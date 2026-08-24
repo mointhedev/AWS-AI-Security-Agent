@@ -20,6 +20,9 @@ When CPU on a monitored EC2 instance spikes above a defined threshold, the agent
 
 ## Architecture
 
+![Architecture Diagram](architecture/diagram.png)
+
+```
 EC2 Instance
 ↓
 Amazon CloudWatch (CPU alarm)
@@ -35,6 +38,7 @@ Amazon Bedrock — Claude Haiku 4.5 (AI decision)
 LEGITIMATE → No action
 MALICIOUS → SSM kills process + Telegram alert
 UNKNOWN → Telegram alert for human review
+```
 
 ---
 
